@@ -24,7 +24,7 @@ img {
     background-color: rgba(245, 243, 243, 0.5);
     background-blend-mode: lighten;
     height: 150px;
-    font-size: 20px;
+    font-size: 1rem;
   }
 }
 
@@ -103,6 +103,7 @@ nav {
   outline: none;
   background: none;
   color: gray;
+  font-size: 1rem;
 }
 .all::after,
 .upper::after,
