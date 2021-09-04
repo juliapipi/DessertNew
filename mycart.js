@@ -9,6 +9,7 @@ let myCartGrand = document.getElementById('my-cart-grand-total');
 let empty = document.querySelector('.empty');
 let myCartBadge = document.querySelector('.my-cart-badge');
 let title = document.getElementById('title');
+let checkout = document.querySelector('.checkout');
 
 // Go to cartIcon
 const badge = function () {
@@ -170,15 +171,16 @@ const calcTotalPrice = function () {
   }, 0);
 
   if (itemTotal === 0) {
-    console.log(myCartGrand.closest('tr'));
     myCartGrand.closest('tr').classList.add('hidden');
     title.classList.add('hidden');
     empty.classList.remove('hidden');
+    checkout.classList.add('hidden');
   } else {
     myCartGrand.closest('tr').classList.remove('hidden');
     myCartGrand.textContent = `$${itemTotal}`;
     title.classList.remove('hidden');
     empty.classList.add('hidden');
+    checkout.classList.remove('hidden');
   }
 };
 calcTotalPrice();
